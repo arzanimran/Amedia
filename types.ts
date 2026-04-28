@@ -14,9 +14,13 @@ export interface Post {
   caption: string;
   created_at: string;
 
-  // 👇 JOINED USER DATA (IMPORTANT)
+  // 👇 JOINED USER DATA
   username?: string;
   avatar?: string;
+
+  // 👇 LIKE SYSTEM DATA (IMPORTANT FIX)
+  like_count?: number;
+  is_liked?: boolean;
 }
 
 export interface Comment {
