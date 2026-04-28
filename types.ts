@@ -14,3 +14,13 @@ export interface Post {
   caption: string;
   created_at: string;
 }
+
+export interface Comment {
+  id: number;
+  user_id: number;
+  post_id: number;
+  text: string;
+  username?: string;
+  avatar?: string;
+  created_at: string;
+}
