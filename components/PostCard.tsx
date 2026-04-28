@@ -81,7 +81,7 @@ export default function PostCard({ post, showDelete = false, onDelete }: Props) 
         <div className="flex items-center gap-4 mb-2">
           <LikeButton
             postId={post.id}
-            initialLiked={post.is_liked}
+            initialLiked={post.is_liked ?? false}
             initialCount={Number(post.like_count)}
           />
 
