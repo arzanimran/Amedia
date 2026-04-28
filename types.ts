@@ -9,18 +9,19 @@ export interface User {
 export interface Post {
   id: number;
   user_id: number;
+  username: string;
+
   media_url: string;
   media_type: string;
-  caption: string;
+  caption?: string;
+
   created_at: string;
 
-  // 👇 JOINED USER DATA
-  username?: string;
+  // 👇 ADD THESE (important fixes)
   avatar?: string;
-
-  // 👇 LIKE SYSTEM DATA (IMPORTANT FIX)
-  like_count?: number;
   is_liked?: boolean;
+  like_count?: number;
+  comment_count?: number;
 }
 
 export interface Comment {
@@ -28,7 +29,7 @@ export interface Comment {
   user_id: number;
   post_id: number;
   text: string;
+  created_at: string;
   username?: string;
   avatar?: string;
-  created_at: string;
 }
