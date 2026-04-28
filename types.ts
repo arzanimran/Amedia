@@ -13,6 +13,10 @@ export interface Post {
   media_type: string;
   caption: string;
   created_at: string;
+
+  // 👇 JOINED USER DATA (IMPORTANT)
+  username?: string;
+  avatar?: string;
 }
 
 export interface Comment {
