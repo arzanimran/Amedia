@@ -54,7 +54,7 @@ export default function Navbar() {
   }
 
   const linkClass =
-    "flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition";
+    "flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition";
 
   return (
     <nav className="sticky top-0 z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800">
@@ -121,15 +121,16 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       {menuOpen && (
-        <div className="sm:hidden px-4 pb-4 flex flex-col gap-2 border-t bg-white dark:bg-gray-900">
+        <div className="sm:hidden px-4 pb-4 flex flex-col gap-2 border-t bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 
           <Link onClick={() => setMenuOpen(false)} href="/" className={linkClass}>
             <Home size={18} /> Feed
           </Link>
 
+          {/* THEME TOGGLE */}
           <button
             onClick={toggleTheme}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full text-sm hover:bg-gray-100 dark:hover:bg-gray-800"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-full text-sm text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800"
           >
             {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />} Theme
           </button>
